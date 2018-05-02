@@ -1,0 +1,68 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.1.RELEASE'
+	}
+	repositories {
+		mavenLocal()
+		maven {
+			name "aliyun1"
+			url 'http://maven.aliyun.com/nexus/content/groups/public'
+		}
+		maven {
+			name "aliyun2"
+			url 'http://maven.aliyun.com/mvn/repository/'
+		}
+		maven {
+			name "spring repo"
+			url "http://repo.spring.io/release"
+		}
+		maven {
+			name "spring milestone"
+			url "https://repo.spring.io/milestone/"
+		}
+		jcenter()
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.yuuyoo'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenLocal()
+	maven {
+		name "aliyun1"
+		url 'http://maven.aliyun.com/nexus/content/groups/public'
+	}
+	maven {
+		name "aliyun2"
+		url 'http://maven.aliyun.com/mvn/repository/'
+	}
+	maven {
+		name "spring repo"
+		url "http://repo.spring.io/release"
+	}
+	maven {
+		name "spring milestone"
+		url "https://repo.spring.io/milestone/"
+	}
+	jcenter()
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-webflux')
+	compile('com.yuuyoo:spring-boot-starter-logging:0.0.1-SNAPSHOT')
+	compileOnly('org.projectlombok:lombok')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
