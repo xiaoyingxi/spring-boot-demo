@@ -1,3 +1,3 @@
 #! /bin/bash
 
-docker build -t logger-service:latest .
+docker build -t demo-service:latest .
