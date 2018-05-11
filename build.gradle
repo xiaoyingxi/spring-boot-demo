@@ -20,6 +20,10 @@ buildscript {
 			name "spring milestone"
 			url "https://repo.spring.io/milestone/"
 		}
+		maven {
+			name "nexus"
+			url 'https://nexus.yuuyoo.com/repository/maven-public/'
+		}
 		jcenter()
 		mavenCentral()
 	}
@@ -54,6 +58,10 @@ repositories {
 		name "spring milestone"
 		url "https://repo.spring.io/milestone/"
 	}
+	maven {
+		name "nexus"
+		url 'https://nexus.yuuyoo.com/repository/maven-public/'
+	}
 	jcenter()
 	mavenCentral()
 }
@@ -63,7 +71,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	compile('org.springframework.boot:spring-boot-starter-webflux')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	//compile('com.yuuyoo:spring-boot-starter-logging:0.0.1-SNAPSHOT')
+	compile('com.yuuyoo:spring-boot-starter-logging:0.0.7')
 	compile('commons-lang:commons-lang:2.6')
 	compile('commons-io:commons-io:2.6')
 	compile('io.springfox:springfox-swagger2:2.8.0')
