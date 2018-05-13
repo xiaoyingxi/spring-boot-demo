@@ -3,5 +3,5 @@ MAINTAINER dave@yuuyoo.com
 
 COPY spring-boot-demo-0.0.1-SNAPSHOT.jar /deployments/app.jar
 
-ENV URL="http://127.0.0.1:10000/manage/status"
-EXPOSE 8080 10000
+ENV URL="http://127.0.0.1:8002/manage/status"
+EXPOSE 8001 8002

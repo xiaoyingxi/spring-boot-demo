@@ -1,0 +1,14 @@
+server.port: 8001
+management:
+  server:
+    port: 8002
+    security.enabled: false
+    health:
+      diskspace.enabled: false
+    endpoint:
+      health.enabled: true
+#      show-details: always
+  endpoints:
+    web:
+      base-path: /manage
+      path-mapping.health: status
